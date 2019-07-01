@@ -1,0 +1,14 @@
+<div class="container">
+	<h1>Blogks List </h1>
+	<br>
+	<div style="padding: 20px 0px" *ngFor="let blogk of blogks"> 
+		<div class="card">
+			<h5 class="card-header">{{ blogk.title }}
+				<span style="float: right; color: red" (click)="removeBlogk(blogk)">X</span>
+			</h5>
+			<div class="card-body">			
+				<b class="card-text">{{ blogk.content }}</b>
+			</div>		
+		</div> 
+	</div>	
+</div>  

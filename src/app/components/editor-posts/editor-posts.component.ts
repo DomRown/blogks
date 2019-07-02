@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IActivity } from '../shared/activity.model';
 
 @Component({
   selector: 'app-editor-posts',
@@ -9,6 +10,7 @@ export class EditorPostsComponent implements OnInit {
 
   constructor() { }
   blogks = []
+  activities: IActivity[]
   ngOnInit() {
   }
 

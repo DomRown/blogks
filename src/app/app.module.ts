@@ -13,6 +13,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ReaderPostComponent } from './components/reader-post/reader-post.component';
 import { ReaderPostsComponent } from './components/reader-posts/reader-posts.component';
 import { MapComponent } from './components/map/map.component';
+import { ActivityListComponent } from './components/activity-list/activity-list.component';
+
+import { ActivityService } from './services/activity.service';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,14 @@ import { MapComponent } from './components/map/map.component';
     PageNotFoundComponent,
     ReaderPostComponent,
     ReaderPostsComponent,
-    MapComponent
+    MapComponent,
+    ActivityListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ActivityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

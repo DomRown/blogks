@@ -1,0 +1,41 @@
+import { Injectable } from '@angular/core';
+import { IActivity } from '../shared/activity.model';
+import { SAVED_ACTIVITES } from '../shared/activities';
+
+
+//? root injectavle provides the class
+@Injectable({
+  providedIn: 'root'
+})
+export class ActivityService {
+
+  constructor() { }
+  
+  getActivites(): IActivity[]{
+	  return SAVED_ACTIVITES.slice(0);
+  }
+  
+  getTotalActivities(allActivities: IActivity[]){
+	  return allActivities.length();
+  }
+  
+  getTotalDistance(allActivities: IActivity[]){
+	 var totalDistance = 0;
+	 for (var i =0; i < allActivities.length; i++){
+		 totalDistance += allActivities[i].distance;
+	 }
+	 return totalDistance;
+  }
+  
+  getFirstDate(allActivities: IActivity[]){
+	  var earliestDate = new Date("01/01/9999");
+	  for(var i=0; i < allActivities.length; i++){
+		  var currentDate = allActivities[i].date;
+		  if (currentDate < earliestDate){
+			  earliestDate=currentDate;
+		  }
+		  return earliestDate;
+	  }
+  };
+  
+}

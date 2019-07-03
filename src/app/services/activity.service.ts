@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IActivity } from '../shared/activity.model';
-import { SAVED_ACTIVITES } from '../shared/activities';
+import { SAVED_ACTIVITIES } from '../shared/activities';
 
 
 //? root injectavle provides the class
@@ -11,8 +11,8 @@ export class ActivityService {
 
   constructor() { }
   
-  getActivites(): IActivity[]{
-	  return SAVED_ACTIVITES.slice(0);
+  getActivities(): IActivity[]{
+	  return SAVED_ACTIVITIES.slice(0);
   }
   
   getTotalActivities(allActivities: IActivity[]){

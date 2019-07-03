@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Environment } from '../../enviroments/environment';
+import { Environment } from '../../environments/environment';
 import { DataService } from './data.service';
 
 import { GeoJson } from '../classes/map';
@@ -11,9 +11,13 @@ import * as mapboxgl from 'mapbox-gl';
 	export class MapService {
 
 	  constructor(private data: DataService) {
-		  mapboxgl.accessToken = environment.mapbox.accessToken
+		  mapboxgl.accessToken = Environment.mapbox.accessToken
 		  
 	  }
+	  
+	  //initializeMap(this.accessToken):{
+	//	  return accessToken;
+	 // }
 	  
 	  //get markers returnss data list observable
 	  getMarkers(): DataListObservable<any> {

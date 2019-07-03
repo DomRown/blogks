@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GeoJson, FeatureCollection } from '../classes/map';
+import { GeoJson, FeatureCollection } from '../../classes/map';
 import * as mapboxgl from 'mapbox-gl';
 import { MapService } from '../../services/map.service';
 
@@ -24,7 +24,7 @@ export class MapBoxComponent implements OnInit {
 
   ngOnInit() {
 	  this.markers = this.mapService.getMarkers();
-	  this.initializeMap();
+	  //this.initializeMap();
   }
 
 }

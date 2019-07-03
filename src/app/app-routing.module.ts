@@ -6,6 +6,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MapComponent } from './components/map/map.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { EditorPostsComponent } from './components/editor-posts/editor-posts.component';
+import { ActivityListComponent } from './components/activity-list/activity-list.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'editor', component: EditorPostsComponent },
   { path: 'map', component: MapComponent },
+  { path: 'activity', component: ActivityListComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

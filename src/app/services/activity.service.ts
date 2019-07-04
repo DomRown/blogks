@@ -16,7 +16,7 @@ export class ActivityService {
   }
   
   getTotalActivities(allActivities: IActivity[]){
-	  return allActivities.length();
+	  return allActivities.length;
   }
   
   getTotalDistance(allActivities: IActivity[]){

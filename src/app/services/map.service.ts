@@ -20,16 +20,19 @@ import * as mapboxgl from 'mapbox-gl';
 	 // }
 	  
 	  //get markers returnss data list observable
-	  getMarkers(): DataListObservable<any> {
-		  return this.data.list('/markers')
+	 getMarkers(): DataListObservable<any> {
+		  //return this.data.list('/markers')
+		  return 1;
 	  }
 	  
 	  createMarker(data: GeoJson){
-		  return this.data.list('/markers').push(data)
+		  //return this.data.list('/markers').push(data)
+		  return 1;
 	  }
 	  
 	  removeMarker($key: string){
-		  return this.data.object('/markers' + $key).remove()
+		  //return this.data.object('/markers' + $key).remove()
+		  return 1;
 	  }
 	  
 	}

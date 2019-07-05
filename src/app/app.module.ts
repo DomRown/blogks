@@ -14,7 +14,7 @@ import { ReaderPostComponent } from './components/reader-post/reader-post.compon
 import { ReaderPostsComponent } from './components/reader-posts/reader-posts.component';
 import { MapComponent } from './components/map/map.component';
 import { ActivityListComponent } from './components/activity-list/activity-list.component';
-
+import { routes } from './app-routing.module';
 import { ActivityService } from './services/activity.service';
 
 @NgModule({
@@ -23,7 +23,7 @@ import { ActivityService } from './services/activity.service';
     NavComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent,    
+    HomeComponent,     
 	//EditorPostComponent,
     EditorPostsComponent,
     PageNotFoundComponent,
@@ -35,6 +35,7 @@ import { ActivityService } from './services/activity.service';
   imports: [
     BrowserModule,
     AppRoutingModule
+	
   ],
   providers: [ActivityService],
   bootstrap: [AppComponent]

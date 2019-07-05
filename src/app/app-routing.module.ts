@@ -9,13 +9,14 @@ import { EditorPostsComponent } from './components/editor-posts/editor-posts.com
 import { ActivityListComponent } from './components/activity-list/activity-list.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'editor', component: EditorPostsComponent },
   { path: 'map', component: MapComponent },
-  { path: 'activity', component: ActivityListComponent },
+  { path: 'run', component: ActivityListComponent },
+  { path: 'run/:id', component: MapComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

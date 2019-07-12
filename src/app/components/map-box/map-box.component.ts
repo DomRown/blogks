@@ -23,7 +23,7 @@ export class MapBoxComponent implements OnInit {
   constructor(private mapService: MapService) { }
 
   ngOnInit() {
-	  this.markers = this.mapService.getMarkers();
+//	  this.markers = this.mapService.getMarkers();
 	  //this.initializeMap();
   }
 

@@ -1,3 +1,13 @@
-<p>
-  map works!
-</p>
+<div class="row">
+	<div class="col">
+		<h2 class="heading">Map Col</h2>
+		<div id="map"></div>		
+	</div>
+
+	<div class="col">
+		<h2 class="heading">Detail Col</h2>
+		<div class="data-heading">Route Name: {{ activityName }}</div>				
+		<div class="data-heading">Total Distance: {{ activityDate | date:"longDate" }}</div>
+		<div class="data-heading">Comments: {{ activityComments }}</div>
+	</div>
+</div>

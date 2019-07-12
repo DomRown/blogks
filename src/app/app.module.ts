@@ -15,6 +15,7 @@ import { ReaderPostsComponent } from './components/reader-posts/reader-posts.com
 import { MapComponent } from './components/map/map.component';
 import { ActivityListComponent } from './components/activity-list/activity-list.component';
 import { routes } from './app-routing.module';
+import { MapService } from './services/map.service';
 import { ActivityService } from './services/activity.service';
 
 @NgModule({
@@ -37,7 +38,7 @@ import { ActivityService } from './services/activity.service';
     AppRoutingModule
 	
   ],
-  providers: [ActivityService],
+  providers: [ActivityService, MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

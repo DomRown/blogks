@@ -29,7 +29,7 @@ export class MapComponent implements OnInit {
 	  +this._route.snapshot.params['id'])
   }
 
-  ngAfterViewInit(){
+  ngAfterContentInit(){
 	this._mapService.plotActivity(+this._route.snapshot.params['id']);
 	this.activityName = this.activity.name;
 	this.activityComments = this.activity.comments;

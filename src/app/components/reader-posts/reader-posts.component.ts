@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapService } from '../../services/map.service';
 
 @Component({
   selector: 'app-reader-posts',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReaderPostsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _mapService: MapService) { }
 
   ngOnInit() {
   }

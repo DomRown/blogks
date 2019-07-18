@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './services/data.service';
 
 //import component from angular core
 @Component({
@@ -9,5 +10,11 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  title = 'new-blogks';
+  students: {};
+  constructor(private _dataService: DataService){
+	  this._dataService.getStudents()
+	  .subscribe(response => this.students = response);
+	  
+  }
+  
 }

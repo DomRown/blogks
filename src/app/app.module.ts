@@ -7,7 +7,6 @@ import { NavComponent } from './components/nav/nav.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
-import { EditorPostComponent } from './components/editor-post/editor-post.component';
 import { EditorPostsComponent } from './components/editor-posts/editor-posts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ReaderPostComponent } from './components/reader-post/reader-post.component';
@@ -17,6 +16,8 @@ import { ActivityListComponent } from './components/activity-list/activity-list.
 import { routes } from './app-routing.module';
 import { MapService } from './services/map.service';
 import { ActivityService } from './services/activity.service';
+import { DataService } from './services/data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,17 +29,18 @@ import { ActivityService } from './services/activity.service';
 	//EditorPostComponent,
     EditorPostsComponent,
     PageNotFoundComponent,
-    ReaderPostComponent,
+    ReaderPostComponent,  
     ReaderPostsComponent,
     MapComponent,
     ActivityListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+	HttpClientModule
 	
   ],
-  providers: [ActivityService, MapService],
+  providers: [ActivityService, MapService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
